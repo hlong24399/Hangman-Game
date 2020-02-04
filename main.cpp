@@ -1,8 +1,3 @@
-#include <iostream>
-#include <iomanip>
-#include <vector>
-using namespace std;
-
 class HangGame {
 private:
 	string alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -132,6 +127,7 @@ public:
 
 	}
 
+
 	void run(string k) {
 		key = k;
 		answer.resize(key.size());
@@ -152,6 +148,12 @@ public:
 			Alphabet();
 			
 			if (isIncluded(select)) {
+				cout << endl;
+				addLetter(select);
+				for (auto i : answer) {
+					cout << i << "  ";
+				}
+				cout << endl;
 				switch (winningCount) {
 				case 0:
 					cout << " Good " << endl;
@@ -171,14 +173,9 @@ public:
 
 				}
 				winningCount++;
-				
-				cout << endl;
-				addLetter(select);
-				for (auto i : answer) {
-					cout << i << "  ";
-				}
-				cout << endl;
+
 			}
+
 			else {
 				///Something here as hangman
 				losingCount++;
