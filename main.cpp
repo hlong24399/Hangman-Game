@@ -1,3 +1,8 @@
+#include <iostream>
+#include <iomanip>
+#include <vector>
+using namespace std;
+
 class HangGame {
 private:
 	string alphabet = "abcdefghijklmnopqrstuvwxyz";
