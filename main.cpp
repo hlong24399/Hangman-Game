@@ -151,7 +151,7 @@ public:
 			cin >> select;
 			Alphabet(select);
 			Alphabet();
-			
+
 			if (isIncluded(select)) {
 				cout << endl;
 				addLetter(select);
@@ -167,13 +167,13 @@ public:
 					cout << " Eh, not bad. " << endl;
 					break;
 				case 2:
-					cout << " Yo! That's brilliant!" << endl;
+					cout << " That's great!" << endl;
 					break;
 				case 3:
-					cout << " No kidding, y'all!!! " << endl;
+					cout << " No kidding!!! " << endl;
 					break;
 				case 4:
-					cout << " God damn! I can't imagine! *passed out* " << endl;
+					cout << " You accomplished it! " << endl;
 					break;
 
 				}
@@ -182,8 +182,8 @@ public:
 			}
 
 			else {
-				///Something here as hangman
 				losingCount++;
+				cout << "not included unfortunately" << endl;
 				hanging(losingCount);
 				for (auto i : answer) {
 					cout << i << "  ";
@@ -191,7 +191,7 @@ public:
 				cout << endl;
 			}
 		}
-		cout << setw(10) << "" << " Well, the game is done. HOWEVER!!! Wanna try again? Kiss that guy twice  " << endl;
+		cout << setw(10) << "" << "Well, the game is done" << endl;
 	}
 };
 
